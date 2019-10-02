@@ -1,0 +1,25 @@
+body {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+}
+header {
+    display: flex;
+    flex-flow: row wrap;
+    background-color: #FEFFC2;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#about_me {
+    background-color: #BA6375;
+    min-width: 100vh;
+}
+
+#projects {
+    background-color: #F0A28E;
+    min-width: 100vh;
+}
+
+#contact {
+    background-color: #F5D7A1;
+    min-width: 100vh;
+}
