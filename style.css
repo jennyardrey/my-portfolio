@@ -11,13 +11,13 @@ a:link {
 }
 a:hover {
     text-decoration: none;
-    color: white;
+    color: #00AAA9;
 }
 a:visited {
     color: lightslategray;
 }
 
-.socials:hover {
+a.socials:hover {
     background-color: #00AAA9;
     color: white;
 }
@@ -31,10 +31,18 @@ a:visited {
 }
 /*Header positioning of logo and title*/
 #logoimg {
+    background-image: url(GlassesLogo.jpg);
     position: center;
-    width: 40vh;
-    margin: 0px 0px 0px 0px;
-    padding: 0px 0px 0px 0px;
+    background-size: 300px;
+    width: 300px;
+    height: 150px;
+}
+  #logoimg:hover {
+    background-image: url(GlassesLogoCool.jpg);
+    position: center;
+    background-size: 300px;
+    width: 300px;
+    height: 150px;
   
 }
 h1 {
@@ -44,7 +52,7 @@ h1 {
 
 }
 /*flex*/
-header {
+#about {
     margin: 0px 0px 0px 0px;
     padding: 10px 10px 10px 10px;
     display: flex;
@@ -109,3 +117,26 @@ p {
 
 }
 
+/*CSS for contact form*/
+.form {
+    text-align: center;
+    padding: 20px 20px 20px 0px;
+}
+
+form {
+    min-width: 100vh;
+    max-height: 100vh;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+    align-items: center;
+    
+    
+}
+#contact_head {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    align-items: center;
+    justify-content: space-between;
+}

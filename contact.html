@@ -8,8 +8,43 @@
     
 </head>
 <body>
-        <script>
-                let d = new Date();
-                document.body.innerHTML = "<h1>Today is " + d + "</h1>"
-                </script>
+        <header id="contact_head">
+                <a><div id="logoimg"></div></a>
+                <h1>Jenny Ardrey</h1>
+                <nav>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#about_me">About Me</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+        </header>
+      <div class="form">
+      <h3 class="form">Get in touch!</h2>
+                <p >Fill in the blanks...</p>
+                <form action='/place-where-form-go' method="POST">
+                <div>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="user_name">
+                </div>
+                <div>
+                    <label for="mail">Email:</label>
+                    <input type="email" id="mail" name="user_mail">
+                </div>
+                <div>
+                    <label for="msg">Message:</label>
+                    <textarea id="msg" name="user_message"></textarea>
+                </div>
+                <div class="button">
+                    <button type="submit">Submit!</button>
+                </div>
+                <div class="button">
+                        <button type="reset">Clear</button>
+                    </div>
+            </form> 
+        </div>  
+
 </body>
+
+<script src="script.js"></script>
