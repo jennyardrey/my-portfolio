@@ -1,25 +1,88 @@
+/* main styles*/
 body {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+    margin: 0px 0px 0px 0px;
+    color: slategray;
+    font-family: "Arial Black", "Arial Bold", Gadget, sans-serif;
+}
+a:link {
+    text-decoration: underline;
+    color: darkslategrey;
+}
+a:hover {
+    text-decoration: none;
+}
+img {
+    width: 35vh;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+}
+h1 {
+    font-size: 75px;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    -webkit-animation:colorchange 20s infinite alternate;
 }
 header {
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    border: 1px solid black;
     display: flex;
-    flex-flow: row wrap;
-    background-color: #FEFFC2;
+    flex-flow: row nowrap;
+    background-color: white;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
+
 }
 
+
 #about_me {
-    background-color: #BA6375;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 0px;
+    padding: 0px;
+    background-color: white;
     min-width: 100vh;
 }
 
 #projects {
-    background-color: #F0A28E;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color:white;
     min-width: 100vh;
 }
 
 #contact {
-    background-color: #F5D7A1;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: white;
     min-width: 100vh;
 }
+
+#socials {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+
+
+@-webkit-keyframes colorchange {
+   0% {
+       color: white;
+   }
+   50% {
+       color: black;
+   }
+   100% {
+       color: white;
+   }
+
+
+  }
