@@ -1,39 +1,71 @@
-/* main styles*/
+/* main body styles*/
 body {
     margin: 0px 0px 0px 0px;
-    color: slategray;
+    color: black;
     font-family: "Arial Black", "Arial Bold", Gadget, sans-serif;
 }
+/*links behavoir inc. social icons*/
 a:link {
     text-decoration: underline;
-    color: darkslategrey;
+    color: black;
 }
 a:hover {
     text-decoration: none;
+    color: white;
 }
-img {
-    width: 35vh;
+a:visited {
+    color: lightslategray;
+}
+
+.socials:hover {
+    background-color: #00AAA9;
+    color: white;
+}
+
+.socials {
+    text-align: center;
+    position: center;
+    padding: -20px 20px -20px 20px;
+    width: 200px;
+    border-radius: 50px;
+}
+/*Header positioning of logo and title*/
+#logoimg {
+    position: center;
+    width: 40vh;
     margin: 0px 0px 0px 0px;
     padding: 0px 0px 0px 0px;
+  
 }
 h1 {
     font-size: 75px;
     margin: 0px 0px 0px 0px;
-    padding: 0px 0px 0px 0px;
-    -webkit-animation:colorchange 20s infinite alternate;
+    padding: 10px 0px 10px 0px;
+
 }
+/*flex*/
 header {
     margin: 0px 0px 0px 0px;
-    padding: 0px 0px 0px 0px;
-    border: 1px solid black;
+    padding: 10px 10px 10px 10px;
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: column nowrap;
     background-color: white;
     align-items: center;
     justify-content: space-between;
+    min-height: 100vh;
 
 }
+ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+    align-content: space-between;
+}
+li {
+    padding: 0px 50px 0px 50px;
 
+}
 
 #about_me {
     display: flex;
@@ -42,10 +74,13 @@ header {
     justify-content: space-evenly;
     margin: 0px;
     padding: 0px;
-    background-color: white;
+    background-color: #EBEBEB;
     min-width: 100vh;
+    min-height: 100vh;
 }
-
+p {
+    padding: 0px 100px 0px 100px;
+}
 #projects {
     display: flex;
     flex-flow: column wrap;
@@ -60,29 +95,17 @@ header {
     flex-flow: column wrap;
     align-items: center;
     justify-content: space-evenly;
-    background-color: white;
+    background-color: #FFFFFF;
     min-width: 100vh;
+    min-height: 100vh;
 }
 
 #socials {
+    
+    font-size: 10em;
+    width: 100vh;
     display: flex;
-    flex-flow: row wrap;
-    align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
 
 }
 
-
-@-webkit-keyframes colorchange {
-   0% {
-       color: white;
-   }
-   50% {
-       color: black;
-   }
-   100% {
-       color: white;
-   }
-
-
-  }
