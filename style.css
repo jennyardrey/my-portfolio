@@ -1,23 +1,23 @@
 /* main body styles*/
 body {
-    margin: 0px 0px 0px 0px;
+    margin: 0px 0px 40px 0px;
     color: black;
     font-family: "Arial Black", "Arial Bold", Gadget, sans-serif;
 }
 /*links behavoir inc. social icons*/
 a:link {
     text-decoration: underline;
-    color: black;
+    color: red;
 }
 a:hover {
     text-decoration: none;
-    color: blue;
+    text-shadow: 2px 2px blue;
 }
 a:visited {
-    color: black;
+    color: red;
 }
 a:visited:hover {
-    color: blue;
+    color: red;
 }
 
 a.socials:hover {
@@ -59,14 +59,20 @@ a.socials:hover {
   
 }
 h1 {
+    color: red;
+    text-shadow: 20px 20px blue;
     font-size: 75px;
-    margin: 0px 0px 0px 0px;
-    padding: 5px 0px 5px 0px;
-
 }
 h1:hover {
     color: red;
+    font-size: 75px;
+    text-shadow: 3px 3px blue;
      
+}
+
+h3 {
+    color: blue;
+    font-size: 40px;
 }
 
 /*flex*/
@@ -117,7 +123,7 @@ p {
     min-width: 100vh;
 }
 
-#contact {
+#social_icons {
     display: flex;
     flex-flow: column wrap;
     align-items: center;
@@ -137,22 +143,40 @@ p {
 }
 
 /*CSS for contact form*/
-.form {
-    text-align: center;
-    padding: 20px 20px 20px 0px;
-}
 
-form {
+
+.contact_div {
     min-width: 100vh;
     max-height: 100vh;
     display: flex;
     flex-flow: column wrap;
     justify-content: space-around;
-    align-items: center;
-    
-    
+    align-items: center;   
+}
+
+.form {
+    font-size: 20px;
+    background-color: white;
+    border-radius: 20px;
+    border: 3px solid blue;
+    padding: 30px;
+}
+.form:hover {
+    box-shadow: 0 0 0 2pt red;
 }
 
 #homescreen{
     height: 100vh;
+}
+
+label {
+    color: red;
+    font-size: 30px;
+    text-shadow: 3px 3px blue;
+    padding: 30px;
+}
+
+input {
+    margin: 30px;
+    padding: 20px;
 }

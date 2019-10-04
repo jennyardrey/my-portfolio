@@ -9,21 +9,21 @@
 </head>
 <body>
         <header class="inner_head">
+                <nav>
+                        <ul>
+                            <li><a href="home.html">Home</a></li>
+                            <li><a href="about.html">About Me</a></li>
+                            <li><a href="projects.html">Projects</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                </nav>
                 <a><div id="logoimg"></div></a>
                 <h1>Contact</h1>
-                <nav>
-                    <ul>
-                        <li><a href="home.html">Home</a></li>
-                        <li><a href="about.html">About Me</a></li>
-                        <li><a href="projects.html">Projects</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </nav>
+                
         </header>
-      <div class="form">
-      <h3 class="form">Get in touch!</h2>
-                <p >Fill in the blanks...</p>
-                <form action='/place-where-form-go' method="POST">
+      <div class="contact_div">
+      <h3 >Get in touch!</h2>
+                <form class="form" action="" method="POST">
                 <div>
                     <label for="name">Name:</label>
                     <input type="text" id="name" name="user_name">
@@ -37,7 +37,7 @@
                     <textarea id="msg" name="user_message"></textarea>
                 </div>
                 <div class="button">
-                    <button type="submit">Submit!</button>
+                    <button id="submit_now" type="submit">Submit!</button>
                 </div>
                 <div class="button">
                         <button type="reset">Clear</button>
