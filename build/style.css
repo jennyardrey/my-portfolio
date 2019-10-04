@@ -1,0 +1,150 @@
+/* main body styles*/
+body {
+    margin: 0px 0px 0px 0px;
+    color: black;
+    font-family: "Arial Black", "Arial Bold", Gadget, sans-serif;
+}
+/*links behavoir inc. social icons*/
+a:link {
+    text-decoration: underline;
+    color: black;
+}
+a:hover {
+    text-decoration: none;
+    color: #00AAA9;
+}
+a:visited {
+    color: black;
+}
+a:visited:hover {
+    color: #00AAA9;
+}
+
+a.socials:hover {
+    background-color: #00AAA9;
+    color: white;
+}
+
+.socials {
+    text-align: center;
+    position: center;
+    padding: -20px 20px -20px 20px;
+    width: 200px;
+    border-radius: 50px;
+}
+/*Header positioning of logo and title*/
+#logoimg {
+    background-image: url(images/GlassesLogo.jpg);
+    position: center;
+    background-size: 300px;
+    width: 300px;
+    height: 150px;
+}
+  #logoimg:hover {
+    background-image: url(images/GlassesLogoCool.jpg);
+    position: center;
+    background-size: 300px;
+    width: 300px;
+    height: 150px;
+  
+}
+h1 {
+    font-size: 75px;
+    margin: 0px 0px 0px 0px;
+    padding: 10px 0px 10px 0px;
+
+}
+h1:hover {
+    color: #00AAA9;
+     
+}
+
+/*flex*/
+#about {
+    margin: 0px 0px 0px 0px;
+    padding: 10px 10px 10px 10px;
+    display: flex;
+    flex-flow: column nowrap;
+    background-color: white;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 100vh;
+
+}
+ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+    align-content: space-between;
+}
+li {
+    padding: 0px 50px 0px 50px;
+
+}
+
+#about_me {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 0px;
+    padding: 0px;
+    background-color: #EBEBEB;
+    min-width: 100vh;
+    min-height: 100vh;
+}
+p {
+    padding: 0px 100px 0px 100px;
+}
+#projects {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color:white;
+    min-width: 100vh;
+}
+
+#contact {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #FFFFFF;
+    min-width: 100vh;
+    min-height: 100vh;
+}
+
+#socials {
+    
+    font-size: 10em;
+    width: 100vh;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+/*CSS for contact form*/
+.form {
+    text-align: center;
+    padding: 20px 20px 20px 0px;
+}
+
+form {
+    min-width: 100vh;
+    max-height: 100vh;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+    align-items: center;
+    
+    
+}
+#contact_head {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    align-items: center;
+    justify-content: space-between;
+}

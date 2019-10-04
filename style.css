@@ -11,10 +11,13 @@ a:link {
 }
 a:hover {
     text-decoration: none;
-    color: #00AAA9;
+    color: blue;
 }
 a:visited {
-    color: lightslategray;
+    color: black;
+}
+a:visited:hover {
+    color: blue;
 }
 
 a.socials:hover {
@@ -29,28 +32,43 @@ a.socials:hover {
     width: 200px;
     border-radius: 50px;
 }
+/*nav stuff*/
+.inner_head {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    align-items: center;
+    justify-content: space-between;
+}
+
 /*Header positioning of logo and title*/
 #logoimg {
-    background-image: url(GlassesLogo.jpg);
+    background-image: url(images/MyGlassesLogo1.jpg);
     position: center;
-    background-size: 300px;
-    width: 300px;
-    height: 150px;
+    background-size: 600px;
+    width: 600px;
+    height: 300px;
+    padding: -50px;
 }
   #logoimg:hover {
-    background-image: url(GlassesLogoCool.jpg);
+    background-image: url(images/MyGlassesLogo2.jpg);
     position: center;
-    background-size: 300px;
-    width: 300px;
-    height: 150px;
+    background-size: 600px;
+    width: 600px;
+    height: 300px;
   
 }
 h1 {
     font-size: 75px;
     margin: 0px 0px 0px 0px;
-    padding: 10px 0px 10px 0px;
+    padding: 5px 0px 5px 0px;
 
 }
+h1:hover {
+    color: red;
+     
+}
+
 /*flex*/
 #about {
     margin: 0px 0px 0px 0px;
@@ -71,7 +89,8 @@ ul {
     align-content: space-between;
 }
 li {
-    padding: 0px 50px 0px 50px;
+    padding: 0px 50px 0px 50px;\
+    flex: 1;
 
 }
 
@@ -133,10 +152,7 @@ form {
     
     
 }
-#contact_head {
-    display: flex;
-    flex-direction: column;
-    background-color: white;
-    align-items: center;
-    justify-content: space-between;
+
+#homescreen{
+    height: 100vh;
 }
