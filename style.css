@@ -180,3 +180,60 @@ input {
     margin: 30px;
     padding: 20px;
 }
+
+/*projects cards*/
+
+.card {
+    width: 300px;
+    height: 400px;
+    border: 1px solid red;
+    border-radius: 4px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.card-header {
+    color: blue;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 300;
+    border-bottom: 1px solid red;
+    padding: 5px 10px;
+}
+
+.card-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 0px;
+}
+
+
+
+.main-description {
+    color: blue;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 20;
+    padding: 5px 10px;
+}
+
+.projects {
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    
+}
+
+.card-img {
+    max-width: 300px;
+    max-height: 250px;
+}
+
+.card:hover {
+    box-shadow: 0 0 0 2pt blue;
+}
