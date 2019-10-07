@@ -2,7 +2,7 @@
 body {
     margin: 0px 0px 40px 0px;
     color: black;
-    font-family: "Arial Black", "Arial Bold", Gadget, sans-serif;
+    font-family: 'Courier New', Courier, monospace;
 }
 /*links behavoir inc. social icons*/
 a:link {
@@ -12,6 +12,8 @@ a:link {
 a:hover {
     text-decoration: none;
     text-shadow: 2px 2px blue;
+    background-color: rgba(0, 0, 255, 0.2);
+
 }
 a:visited {
     color: red;
@@ -21,7 +23,7 @@ a:visited:hover {
 }
 
 a.socials:hover {
-    background-color: #00AAA9;
+   
     color: white;
 }
 
@@ -34,11 +36,101 @@ a.socials:hover {
 }
 /*nav stuff*/
 .inner_head {
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     background-color: white;
     align-items: center;
     justify-content: space-between;
+}
+
+.wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 50px;
+}
+
+.flex-nav ul {
+    font-size: 30px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.flex-nav li {
+    flex: 3;
+}
+
+.flex-nav .socials {
+    flex: 1;
+}
+a {
+    transition: all 0.5s;
+}
+nav a {
+    text-align: center;
+    padding: 20px 5px;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    transition: all 0.5s;
+}
+
+@media all and (max-width:600px) {
+
+    .flex-nav ul {
+        flex-wrap: wrap;
+    }
+    .flex-nav li {
+        flex: 1 1 50%;
+    }
+    .flex-nav.social {
+        flex: 1 1 25%;
+    }
+}
+
+
+@media all and (max-width:400px){
+    .flex-nav li {
+        flex-basis: 100%;
+    }
+}
+
+@media all and (max-width:600px) {
+
+    .flex-nav ul {
+        flex-wrap: wrap;
+    }
+    .flex-nav li {
+        flex: 1 1 50%;
+    }
+    .flex-nav.social {
+        flex: 1 1 25%;
+    }
+}
+
+
+@media all and (max-width:400px){
+    .flex-nav li {
+        flex-basis: 100%;
+    }
+}
+
+/*ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+    align-content: space-between;
+    flex-grow: 1;
+}
+li {
+    padding: 0px 50px 0px 50px;
+    flex: 1;
+
 }
 
 /*Header positioning of logo and title*/
@@ -49,6 +141,7 @@ a.socials:hover {
     width: 600px;
     height: 300px;
     padding: -50px;
+    transition: all 0.5s;
 }
   #logoimg:hover {
     background-image: url(images/MyGlassesLogo2.jpg);
@@ -62,6 +155,7 @@ h1 {
     color: red;
     text-shadow: 20px 20px blue;
     font-size: 75px;
+    transition: all 0.5s;
 }
 h1:hover {
     color: red;
@@ -87,27 +181,16 @@ h3 {
     min-height: 100vh;
 
 }
-ul {
-    list-style: none;
-    display: flex;
-    justify-content: space-around;
-    align-items: stretch;
-    align-content: space-between;
-}
-li {
-    padding: 0px 50px 0px 50px;\
-    flex: 1;
 
-}
 
 #about_me {
     display: flex;
     flex-flow: column wrap;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
     margin: 0px;
     padding: 0px;
-    background-color: #EBEBEB;
+    background-color: white;
     min-width: 100vh;
     min-height: 100vh;
 }
@@ -155,6 +238,12 @@ p {
 }
 
 .form {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    align-content: space-around;
+    align-items: center;
+    justify-items: center;
     font-size: 20px;
     background-color: white;
     border-radius: 20px;
@@ -179,6 +268,34 @@ label {
 input {
     margin: 30px;
     padding: 20px;
+    border: 1px solid red;
+}
+
+input:focus {
+    box-shadow: 0 0 0 2pt blue;
+}
+
+textarea {
+    border: 1px solid red;
+    min-width: 167px;
+    min-height: 55px;
+}
+
+textarea:focus {
+    box-shadow: 0 0 0 2pt blue;
+}
+.button {
+    background-color: blue;
+    font-size: 30px;
+    color: red;
+    align-self: center;
+    margin: 20px 10px;
+}
+
+.button:hover {
+    background-color: red;
+    color: blue;
+    box-shadow: 0 0 0 2pt blue;
 }
 
 /*projects cards*/
@@ -237,3 +354,5 @@ input {
 .card:hover {
     box-shadow: 0 0 0 2pt blue;
 }
+
+/*Mobile stuff*/

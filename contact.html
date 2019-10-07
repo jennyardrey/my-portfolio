@@ -9,21 +9,36 @@
 </head>
 <body>
         <header class="inner_head">
-                <nav>
-                        <ul>
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="about.html">About Me</a></li>
-                            <li><a href="projects.html">Projects</a></li>
-                            <li><a href="contact.html">Contact</a></li>
-                        </ul>
-                </nav>
+                <div class="wrapper">
+
+            <nav class="flex-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li class="social">
+                        <a href="http://twitter.com"><i class="fab fa-twitter"></i></a>
+                    </li>
+                    <li class="social">
+                            <a href="http://github.com"><i class="fab fa-github"></i></a>
+                    </li>
+                    <li class="social">
+                                <a href="http://linkdin.com"><i class="fab fa-linkedin"></i></a>
+                    </li>
+                    <li class="social">
+                            <a href="http://instagram.com"><i class="fab fa-instagram"></i></a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
                 <a><div id="logoimg"></div></a>
                 <h1>Contact</h1>
                 
         </header>
       <div class="contact_div">
-      <h3 >Get in touch!</h2>
-                <form class="form" action="" method="POST">
+        <h3>Get in touch!</h2>
+                <form class="form" action="#" method="POST">
                 <div>
                     <label for="name">Name:</label>
                     <input type="text" id="name" name="user_name">
@@ -36,11 +51,11 @@
                     <label for="msg">Message:</label>
                     <textarea id="msg" name="user_message"></textarea>
                 </div>
-                <div class="button">
-                    <button id="submit_now" type="submit">Submit!</button>
+                <div>
+                    <button class="button" id="submit_now" type="submit">Submit!</button>
                 </div>
-                <div class="button">
-                        <button type="reset">Clear</button>
+                <div>
+                        <button class="button" id="clear_now" type="reset">Clear</button>
                     </div>
             </form> 
         </div>  
