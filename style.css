@@ -4,133 +4,12 @@ body {
     color: black;
     font-family: 'Courier New', Courier, monospace;
 }
-/*links behavoir inc. social icons*/
-a:link {
-    text-decoration: underline;
-    color: red;
-}
-a:hover {
-    text-decoration: none;
-    text-shadow: 2px 2px blue;
-    background-color: rgba(0, 0, 255, 0.2);
-
-}
-a:visited {
-    color: red;
-}
-a:visited:hover {
-    color: red;
+html {
+    box-sizing: border-box;
 }
 
-a.socials:hover {
-   
-    color: white;
-}
-
-.socials {
-    text-align: center;
-    position: center;
-    padding: -20px 20px -20px 20px;
-    width: 200px;
-    border-radius: 50px;
-}
-/*nav stuff*/
-.inner_head {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    background-color: white;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.wrapper {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 50px;
-}
-
-.flex-nav ul {
-    font-size: 30px;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: space-between;
-    
-}
-
-.flex-nav li {
-    flex: 3;
-}
-
-.flex-nav .socials {
-    flex: 1;
-}
-a {
-    transition: all 0.5s;
-}
-nav a {
-    text-align: center;
-    padding: 20px 5px;
-    display: inline-block;
-    width: 100%;
-    text-align: center;
-    transition: all 0.5s;
-}
-
-@media all and (max-width:600px) {
-
-    .flex-nav ul {
-        flex-wrap: wrap;
-    }
-    .flex-nav li {
-        flex: 1 1 50%;
-    }
-    .flex-nav.social {
-        flex: 1 1 25%;
-    }
-}
-
-
-@media all and (max-width:400px){
-    .flex-nav li {
-        flex-basis: 100%;
-    }
-}
-
-@media all and (max-width:600px) {
-
-    .flex-nav ul {
-        flex-wrap: wrap;
-    }
-    .flex-nav li {
-        flex: 1 1 50%;
-    }
-    .flex-nav.social {
-        flex: 1 1 25%;
-    }
-}
-
-
-@media all and (max-width:400px){
-    .flex-nav li {
-        flex-basis: 100%;
-    }
-}
-
-/*ul {
-    list-style: none;
-    display: flex;
-    justify-content: space-around;
-    align-items: stretch;
-    align-content: space-between;
-    flex-grow: 1;
-}
-li {
-    padding: 0px 50px 0px 50px;
-    flex: 1;
-
+*, *:before, *:after {
+    box-sizing: inherit;
 }
 
 /*Header positioning of logo and title*/
@@ -141,7 +20,7 @@ li {
     width: 600px;
     height: 300px;
     padding: -50px;
-    transition: all 0.5s;
+    transition: all 1s;
 }
   #logoimg:hover {
     background-image: url(images/MyGlassesLogo2.jpg);
@@ -168,7 +47,116 @@ h3 {
     color: blue;
     font-size: 40px;
 }
+/*links behavoir inc. social icons*/
+.inner_head {
+    min-height: 100vh;
+    min-width: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    align-items: center;
+    justify-content: space-between;
+}
 
+/*nav stuff*/
+
+nav a {
+    font-size: 30px;
+    font-weight: 100;
+    letter-spacing: 2px;
+    text-decoration: none;
+   
+    padding: 20px 5px;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+
+}
+
+a:link {
+    text-decoration: underline;
+    color: red;
+}
+a:hover {
+    text-decoration: none;
+    text-shadow: 2px 2px blue;
+    background-color: rgba(0, 0, 255, 0.2);
+
+}
+a:visited {
+    color: red;
+}
+a:visited:hover {
+    color: red;
+}
+
+.toggleNav {
+    display:none;
+}
+
+/*flex container*/
+.flex-nav ul {
+    border: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+/* flex item */
+.flex-nav li {
+    flex: 3;
+}
+
+.flex-nav .social {
+    flex: 1;
+}
+
+@media all and (max-width:800px) {
+    .flex-nav ul {
+        flex-wrap: wrap;
+    }
+
+    .flex-nav li {
+        flex:1 1 50%;
+    }
+
+    .flex-nav .social {
+        flex:1 1 25%;
+    }
+}
+
+@media all and (max-width:600px) {
+
+    .flex-nav li {
+        flex-basis:100%
+    }
+
+    .wrapper {
+        display:flex;
+        flex-direction: column;
+    }
+
+    .wrapper > * {
+        order:9999;
+    }
+
+    .flex-nav {
+        order:1;
+    }
+
+    .toggleNav {
+		display: block;
+		font-size: 
+      }
+    
+      .flex-nav ul {
+        display: none;
+      }
+        .flex-nav ul.open {
+          display:flex;
+		}
+	}
 /*flex*/
 #about {
     margin: 0px 0px 0px 0px;
@@ -199,7 +187,7 @@ p {
 }
 #projects {
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: row wrap;
     align-items: center;
     justify-content: space-evenly;
     background-color:white;
@@ -297,7 +285,7 @@ textarea:focus {
     color: blue;
     box-shadow: 0 0 0 2pt blue;
 }
-
+/* end of contact form stuff */
 /*projects cards*/
 
 .card {
@@ -354,5 +342,7 @@ textarea:focus {
 .card:hover {
     box-shadow: 0 0 0 2pt blue;
 }
+
+/* End of projects stuff */
 
 /*Mobile stuff*/
