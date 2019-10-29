@@ -34,6 +34,10 @@
 		var brickOffsetTop = 30;
 		var brickOffsetLeft = 30;
 		var score = 0;
+		var lives = 3;
+		var GAMEOVER = "Soz! You lost!";
+		var WINNER = "OMG! You won!";
+		
 		
 		var bricks = [];
 		for(var c=0;c<brickColumnCount; c++) {
@@ -81,9 +85,9 @@
 							b.status = 0;
 							score++;
 							if(score == brickRowCount*brickColumnCount){
-								alert("OMG YOU HAVE WON");
+								alert(WINNER);
 								document.location.reload();
-								clearInterval(interval);
+								
 							}
 						}
 					}
@@ -94,6 +98,12 @@
 			ctx.font = "16px Arial";
 			ctx.fillStyle = "red";
 			ctx.fillText("Score: " + score, 8, 20);
+		}
+		
+		function drawLives() {
+			ctx.font = "16px Arial";
+			ctx.fillStyle = "blue";
+			ctx.fillText("Lives: " + lives, canvas.width-65, 20)
 		}
 		
 		function drawBall() {
@@ -108,7 +118,7 @@
 		function drawPaddle() {
 			ctx.beginPath();
 			ctx.lineWidth = 5;
-			ctx.rect(paddleX, canvas.height-paddleHeight-5, paddleWidth, paddleHeight);
+			ctx.rect(paddleX, canvas.height-(paddleHeight+3), paddleWidth, paddleHeight);
 			ctx.strokeStyle = "red";
 			ctx.stroke();
 			ctx.fillStyle = "blue";
@@ -143,6 +153,7 @@
 			drawBall();
 			drawPaddle();
 			drawScore();
+			drawLives();
 			collisionDetection();
 			
 			if(x + dx > canvas.width-ballRadius || x + dx <ballRadius) {
@@ -153,14 +164,24 @@
 				dy = -dy;
 			} else if (y + dy > canvas.height - ballRadius) {
 				if(x > paddleX && x < paddleX + paddleWidth){
-					if(y = y-(paddleHeight+7)){
+					if(y = y-(paddleHeight*3)){
 						dy = -dy  ;
 					}
 				}
 				else {
-					alert("SOZ! GAME OVER!");
-					document.location.reload();
-					clearInterval(interval);
+					lives--;
+					if(!lives) {
+						alert(GAMEOVER);
+						document.location.reload();
+						
+					}
+					else {
+						x = canvas.width/2;
+						y = canvas.height-30;
+						dx = 3;
+						dy = -3;
+						paddleX = (canvas.width-paddleWidth)/2;
+					}
 				}
 			}
 			
@@ -172,9 +193,10 @@
 			}
 			x += dx;
 			y += dy;
+			requestAnimationFrame(draw);
 		}
 		
-		var interval = setInterval(draw, 10);
+		draw();
 		
 	</script>
 	

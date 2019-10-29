@@ -12,6 +12,10 @@ html {
     box-sizing: inherit;
 }
 
+p {
+    font-size: 20px;
+}
+
 /*Header positioning of logo and title*/
 #logoimg {
     background-image: url(images/MyGlassesLogo1.jpg);
@@ -22,13 +26,13 @@ html {
     padding: -50px;
     transition: all 1s;
 }
-  #logoimg:hover {
+#logoimg:hover {
     background-image: url(images/MyGlassesLogo2.jpg);
     position: center;
     background-size: 600px;
     width: 600px;
     height: 300px;
-  
+    
 }
 h1 {
     color: red;
@@ -40,7 +44,7 @@ h1:hover {
     color: red;
     font-size: 75px;
     text-shadow: 3px 3px blue;
-     
+    
 }
 
 h3 {
@@ -65,12 +69,12 @@ nav a {
     font-weight: 100;
     letter-spacing: 2px;
     text-decoration: none;
-   
+    
     padding: 20px 5px;
     display: inline-block;
     width: 100%;
     text-align: center;
-
+    
 }
 
 a:link {
@@ -81,7 +85,7 @@ a:hover {
     text-decoration: none;
     text-shadow: 2px 2px blue;
     background-color: rgba(0, 0, 255, 0.2);
-
+    
 }
 a:visited {
     color: red;
@@ -116,47 +120,47 @@ a:visited:hover {
     .flex-nav ul {
         flex-wrap: wrap;
     }
-
+    
     .flex-nav li {
         flex:1 1 50%;
     }
-
+    
     .flex-nav .social {
         flex:1 1 25%;
     }
 }
 
 @media all and (max-width:600px) {
-
+    
     .flex-nav li {
         flex-basis:100%
     }
-
+    
     .wrapper {
         display:flex;
         flex-direction: column;
     }
-
+    
     .wrapper > * {
         order:9999;
     }
-
+    
     .flex-nav {
         order:1;
     }
-
+    
     .toggleNav {
 		display: block;
 		font-size: 
-      }
+    }
     
-      .flex-nav ul {
+    .flex-nav ul {
         display: none;
-      }
-        .flex-nav ul.open {
-          display:flex;
-		}
-	}
+    }
+    .flex-nav ul.open {
+        display:flex;
+    }
+}
 /*flex*/
 #about {
     margin: 0px 0px 0px 0px;
@@ -167,7 +171,7 @@ a:visited:hover {
     align-items: center;
     justify-content: space-between;
     min-height: 100vh;
-
+    
 }
 
 
@@ -210,7 +214,7 @@ p {
     width: 100vh;
     display: flex;
     justify-content: space-between;
-
+    
 }
 
 /*CSS for contact form*/
